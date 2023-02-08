@@ -7,8 +7,6 @@
 const productName = "Droid";
 const pricePerItem = 2000;
 
-
-
 2
 // Имя товара изменили на "Repair droid" и увеличили его цену на 1500 кредитов.Переопредели значения переменных pricePerItem и productName после их объявления.
 
