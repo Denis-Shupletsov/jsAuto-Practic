@@ -55,11 +55,9 @@ const b = 180;
 // Напиши скрипт который проверяет заканчивается ли значение переменной link символом /.
 // Если нет, добавь в конец значения link этот символ.Используй конструкцию if...else.
 
-let link = 'https://my-site.com/about';
-// Пиши код ниже этой строки
+// let link = 'https://my-site.com/about';
 
-// Пиши код выше этой строки
-console.log(link);
+// console.log(link);
 
 
 
@@ -69,11 +67,9 @@ console.log(link);
 // Если нет, добавь в конец значения link этот символ, но только в том случае, если в link есть подстрока "my-site".
 // Используй конструкцию if...else.
 
-let link = 'https://somesite.com/about';
-// Пиши код ниже этой строки
+// let link = 'https://somesite.com/about';
 
-// Пиши код выше этой строки
-console.log(link);
+// console.log(link);
 
 
 
@@ -81,11 +77,11 @@ console.log(link);
 // Example 7 - Форматирование ссылки(тернарный оператор)
 // Выполни рефакторинг кода задачи номер 4 используя тернарный оператор.
 
-let link = 'https://somesite.com/about';
-if (link.includes('my-site') && !link.endsWith('/')) {
-    link += '/';
-}
-console.log(link);
+// let link = 'https://somesite.com/about';
+// if (link.includes('my-site') && !link.endsWith('/')) {
+//     link += '/';
+// }
+// console.log(link);
 
 
 8
@@ -97,7 +93,8 @@ console.log(link);
 // меньше 17, выводи строку "Pending"
 // больше либо равно 17 и меньше либо равно 24, выводи строку "Expires"
 // больше 24, выводи строку "Overdue"
-const hours = 10;
+
+// const hours = 10;
 
 
 
@@ -110,8 +107,8 @@ const hours = 10;
 // Eсли до дедлайна 1 день - выведи строку "Завтра"
 // Eсли до дедлайна 2 дня - выведи строку "Послезавтра"
 // Eсли до дедлайна 3 + дней - выведи строку "Дата в будущем"
-const daysUntilDeadline = 5;
-// Пиши код ниже этой строки
+
+// const daysUntilDeadline = 5;
 
 
 
@@ -120,17 +117,17 @@ const daysUntilDeadline = 5;
 // Example 10 - Дедлайн сдачи проекта(switch)
 // Выполни рефакторинг кода задачи номер 5 используя switch.
 
-const daysUntilDeadline = 5;
+// const daysUntilDeadline = 5;
 
-if (daysUntilDeadline === 0) {
-    console.log('Сегодня');
-} else if (daysUntilDeadline === 1) {
-    console.log('Завтра');
-} else if (daysUntilDeadline === 2) {
-    console.log('Послезавтра');
-} else {
-    console.log('Дата в будущем');
-}
+// if (daysUntilDeadline === 0) {
+//     console.log('Сегодня');
+// } else if (daysUntilDeadline === 1) {
+//     console.log('Завтра');
+// } else if (daysUntilDeadline === 2) {
+//     console.log('Послезавтра');
+// } else {
+//     console.log('Дата в будущем');
+// }
 
 
 
@@ -139,8 +136,8 @@ if (daysUntilDeadline === 0) {
 // Example 11 - Цикл for
 // Напиши цикл for который выводит в консоль браузера числа по возрастанию от min до max, но только если число кратное 5.
 
-const max = 100;
-const min = 20;
+// const max = 100;
+// const min = 20;
 
 
 
