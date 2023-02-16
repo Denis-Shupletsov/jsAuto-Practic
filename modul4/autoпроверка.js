@@ -436,26 +436,26 @@ const oddNumbers = numbers.filter(number => number % 2 !== 0);
 20
 // Дополни код так, чтобы в переменной allGenres был массив всех жанров книг(свойство genres) из массива books, а в переменной uniqueGenres массив уникальных жанров - без повторений.
 
-const books = [
-    {
-        title: "The Last Kingdom",
-        author: "Bernard Cornwell",
-        genres: ["adventure", "history"],
-    },
-    {
-        title: "Beside Still Waters",
-        author: "Robert Sheckley",
-        genres: ["fiction", "mysticism"],
-    },
-    {
-        title: "Redder Than Blood",
-        author: "Tanith Lee",
-        genres: ["horror", "mysticism", "adventure"],
-    },
-];
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         genres: ["adventure", "history"],
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         genres: ["fiction", "mysticism"],
+//     },
+//     {
+//         title: "Redder Than Blood",
+//         author: "Tanith Lee",
+//         genres: ["horror", "mysticism", "adventure"],
+//     },
+// ];
 // Change code below this line
-const allGenres = books.flatMap(book => book.genres);
-const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
 
 21
 // Используя метод filter() дополни код так, чтобы:
@@ -659,6 +659,229 @@ const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(gen
 //     return users.filter(user => user.friends.includes(friendName));
 // };
 
-const getUsersWithFriend = (users, friendName) =>
-    (users.filter(user => user.friends.includes(friendName)));
+// const getUsersWithFriend = (users, friendName) =>
+//     (users.filter(user => user.friends.includes(friendName)));
+
+
+25
+// Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей(свойство friends).У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
+
+// const getFriends = (users) => {
+//     const allFriends = users.flatMap(user => user.friends);
+//     const uniqueFriends = allFriends.filter((friend, index, array) => array.indexOf(friend) === index);
+//     return uniqueFriends;
+// };
+
+26
+// Дополни функцию getActiveUsers(users) так, чтобы она возвращала массив активных пользователей, значение свойства isActive которых true.
+
+// const getActiveUsers = (users) => {
+//     return users.filter(user => user.isActive)
+// };
+
+27
+// Дополни функцию getInactiveUsers(users) так, чтобы она возвращала массив неактивных пользователей, значение свойства isActive которых false.
+
+// const getInactiveUsers = (users) => (users.filter(user => !user.isActive));
+
+28
+
+// Используя метод find() дополни код так, чтобы:
+
+// В переменной bookWithTitle получился объект книги название которой(свойство title) совпадает со значением переменной BOOK_TITLE.
+// В переменной bookByAuthor получился объект книги автор который(свойство author) совпадает со значением переменной AUTHOR.
+
+// const books = [
+//     {
+//         title: 'The Last Kingdom',
+//         author: 'Bernard Cornwell',
+//         rating: 8.38,
+//     },
+//     {
+//         title: 'Beside Still Waters',
+//         author: 'Robert Sheckley',
+//         rating: 8.51,
+//     },
+//     {
+//         title: 'The Dream of a Ridiculous Man',
+//         author: 'Fyodor Dostoevsky',
+//         rating: 7.75,
+//     },
+//     { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find(book => book.author === AUTHOR);
+
+29
+// [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ]
+
+// Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого(свойство email) совпадает со значением параметра email.
+
+// const getUserWithEmail = (users, email) => (users.find(user => user.email === email));
+
+30
+// Используя метод every() дополни код так, чтобы:
+
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(array => array % 2 === 0);//true
+// const eachElementInFirstIsOdd = firstArray.every(array => array % 1 !== 0);//false
+
+// const eachElementInSecondIsEven = secondArray.every(array => array % 2 === 0);//false
+// const eachElementInSecondIsOdd = secondArray.every(array => array % 1 === 0);//true
+
+// const eachElementInThirdIsEven = thirdArray.every(array => array % 2 === 0);//false
+// const eachElementInThirdIsOdd = thirdArray.every(array => array % 1 !== 0);//false
+
+
+31
+// [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ]
+
+// Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны(свойство isActive) и возвращала true или false.
+
+const isEveryUserActive = (users) => {
+
+};
 
