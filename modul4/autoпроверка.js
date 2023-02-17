@@ -1276,20 +1276,20 @@ const totalAveragePlaytimePerGame = players.reduce((totalPlay, player) => {
 // ];
 
 // В алфавитном порядке
-const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
-    firstBook.author.localeCompare(secondBook.author));
+// const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+//     firstBook.author.localeCompare(secondBook.author));
 
-// В обратном алфавитном порядке
-const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
-    secondBook.author.localeCompare(firstBook.author));
+// // В обратном алфавитном порядке
+// const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
+//     secondBook.author.localeCompare(firstBook.author));
 
-// По возрастанию рейтинга
-const sortedByAscendingRating = [...books].sort((firstBook, secondBook) =>
-    firstBook.rating - secondBook.rating);
+// // По возрастанию рейтинга
+// const sortedByAscendingRating = [...books].sort((firstBook, secondBook) =>
+//     firstBook.rating - secondBook.rating);
 
-// По убыванию рейтинга
-const sortedByDescentingRating = [...books].sort((firstBook, secondBook) =>
-    secondBook.rating - firstBook.rating);
+// // По убыванию рейтинга
+// const sortedByDescentingRating = [...books].sort((firstBook, secondBook) =>
+//     secondBook.rating - firstBook.rating);
 
 42
 // [
@@ -1377,3 +1377,244 @@ const sortByAscendingBalance = users => {
 // // Короткая форма
 // const sortByDescendingFriendCount = users => ([...users].sort((start, last) =>
 //     last.friends.length - start.friends.length));
+
+44
+
+// [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ]
+
+// Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени(свойство name) в алфавитном порядке.
+
+// const sortByName = users => {
+//     return [...users].sort((start, last) =>
+//         start.name.localeCompare(last.name))
+// };
+
+
+45
+// Дополни код так, чтобы в переменной names получился массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING.
+
+// Пример с конспекта
+// const students = [
+//     { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
+//     { name: "Poly", score: 59, courses: ["science", "mathematics"] },
+//     { name: "Ajax", score: 37, courses: ["physics", "biology"] },
+//     { name: "Kiwi", score: 94, courses: ["literature", "science"] },
+// ];
+
+
+// По возрастинию баллов
+// const sortedByAscendingScore = [...students].sort((a, b) => a.score - b.score);
+// console.log(sortedByAscendingScore);
+
+// После возрастания забрать их имена
+// const names = sortedByAscendingScore.map(student => student.name);
+
+// console.log(names); // ["Ajax", "Poly", "Mango", "Kiwi"]
+
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     {
+//         title: "The Dreams in the Witch House",
+//         author: "Howard Lovecraft",
+//         rating: 8.67,
+//     },
+// ];
+// const MIN_BOOK_RATING = 8;
+
+// const names = books.filter(book => book.rating > MIN_BOOK_RATING)
+//     .map(book => book.author)
+//     .sort((start, last) => start.localeCompare(last));
+
+// console.log(names);
+
+// Каждое решение отдельно
+
+// Из всех рейтингов взять все, которые больше "8".
+// const ends = books.filter(book => book.rating > MIN_BOOK_RATING);
+// console.log(ends);
+
+// // // Из оствшихся рейтингов вытянуть имена
+// const map = ends.map(book => book.author);
+// console.log(map);
+
+// // По алфавиту
+// const names = map.sort((start, last) =>
+//     start.localeCompare(last));
+// console.log(names);
+
+46
+const users = [
+    {
+        name: "Moore Hensley", // 1
+        email: "moorehensley@indexia.com",
+        eyeColor: "blue",
+        friends: ["Sharron Pace"],
+        isActive: false,
+        balance: 2811,
+        gender: "male"
+    },
+    {
+        name: "Sharlene Bush", //2
+        email: "sharlenebush@tubesys.com",
+        eyeColor: "blue",
+        friends: ["Briana Decker", "Sharron Pace"],
+        isActive: true,
+        balance: 3821,
+        gender: "female"
+    },
+    {
+        name: "Ross Vazquez", //5
+        email: "rossvazquez@xinware.com",
+        eyeColor: "green",
+        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+        isActive: false,
+        balance: 3793,
+        gender: "male"
+    },
+    {
+        name: "Elma Head", //3
+        email: "elmahead@omatom.com",
+        eyeColor: "green",
+        friends: ["Goldie Gentry", "Aisha Tran"],
+        isActive: true,
+        balance: 2278,
+        gender: "female"
+    },
+    {
+        name: "Carey Barr", //6
+        email: "careybarr@nurali.com",
+        eyeColor: "blue",
+        friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+        isActive: true,
+        balance: 3951,
+        gender: "male"
+    },
+    {
+        name: "Blackburn Dotson", //7
+        email: "blackburndotson@furnigeer.com",
+        eyeColor: "brown",
+        friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+        isActive: false,
+        balance: 1498,
+        gender: "male"
+    },
+    {
+        name: "Sheree Anthony", //4
+        email: "shereeanthony@kog.com",
+        eyeColor: "brown",
+        friends: ["Goldie Gentry", "Briana Decker"],
+        isActive: true,
+        balance: 2764,
+        gender: "female"
+    }
+]
+
+// Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей(свойство friends).
+
+// const getNamesSortedByFriendCount = users => {
+//     return [...users].sort((a, b) => a.friends.length - b.friends.length)
+//         .map(user => user.name);
+// };
+
+47
+
+
+
+// Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей(свойство friends) отсортированный по алфавиту.
+// Change code below this line
+// const getSortedFriends = users => {
+//     return users.flatMap(user => user.friends).
+//         filter((friend, index, array) => array.indexOf(friend) === index).
+//         sort((a, b) => a.localeCompare(b))
+// };
+
+// console.table(getSortedFriends(users));
+
+48
+// Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей(свойство balance), пол которых(свойство gender) совпадает со значением параметра gender.
+
+const getTotalBalanceByGender = (users, gender) => {
+    return
+};
+
+
+console.table(getTotalBalanceByGender(users));
